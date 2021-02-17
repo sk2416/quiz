@@ -40,6 +40,16 @@ const quizData = [
 
   },
 
+  {
+    question:"how many years do u want live with me",
+    a:"100",
+    b:"30",
+    c:"50",
+    d:"infinity",
+    correct:"d",
+
+  },
+
 
 
 ];
@@ -89,8 +99,12 @@ submitBtn.addEventListener('click',() =>{
     if(currentQuiz<quizData.length){
     loadQuiz()
    }else{
-     document.getElementById("quiz").innerHTML = " you have answerd " + score + "/"+ quizData.length+ " questions correctly love u bujjodaaa ummmmha babe #refresh the page#" ;
+     quiz.innerHTML =`
+     <h2>you answerd  ${score}/${quizData.length} questions correctly </h2>
 
- }
+     <button onclick="window.location.reload()"
+     >reload</button>
+      `
+   }
 }
 })
